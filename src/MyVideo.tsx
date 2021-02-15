@@ -5,18 +5,18 @@ const Title: React.FC<{title: string;}> = ({title}) => {
     const opacity = interpolate(frame, [0, 20], [0, 1], {extrapolateRight: 'clamp'});
 
     return (
-      <div style={{opacity}} >{title}</div>
+      <div style={{color: '#0A66C2', fontSize: 400, width: '100%', marginTop: '10%', textAlign: 'center', opacity}}>{title}</div>
     )
 }
 
 export const MyVideo = () => {
   return (
-    <div style={{flex: 1, color: "white", justifyContent: 'center', alignItems: 'center'}}>
+    <div>
       <Sequence from={0} durationInFrames={40}>
-        <Title title="Hello"/>
+        <Title title="Salut"/>
       </Sequence>
       <Sequence from={40} durationInFrames={Infinity}>
-        <Title title="World"/>
+        <Title title="LinkedIn"/>
       </Sequence>
     </div>
   )
